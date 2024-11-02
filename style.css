@@ -1,0 +1,32 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    /* outline: 2px solid tomato; */
+}
+
+:root{
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey700: hsl(0, 0%, 20%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey900: hsl(0, 0%, 8%);
+    --regular: 400;
+    --semibold: 600;
+    --bold: 700;
+}
+
+html{
+    font-size: 14px;
+    font-family: Inter;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
