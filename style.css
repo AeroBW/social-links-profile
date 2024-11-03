@@ -3,7 +3,7 @@
     margin: 0;
     border: 0;
     padding: 0;
-    /* outline: 2px solid tomato; */
+    /* outline: 1px solid tomato; */
 }
 
 :root{
@@ -15,6 +15,14 @@
     --regular: 400;
     --semibold: 600;
     --bold: 700;
+    --step--2: clamp(0.4774rem, 0.4321rem + 0.2264vw, 0.6076rem);
+    --step--1: clamp(0.5729rem, 0.5186rem + 0.2717vw, 0.7292rem);
+    --step-0: clamp(0.6875rem, 0.6223rem + 0.3261vw, 0.875rem);
+    --step-1: clamp(0.825rem, 0.7467rem + 0.3913vw, 1.05rem);
+    --step-2: clamp(0.99rem, 0.8961rem + 0.4696vw, 1.26rem);
+    --step-3: clamp(1.188rem, 1.0753rem + 0.5635vw, 1.512rem);
+    --step-4: clamp(1.4256rem, 1.2904rem + 0.6762vw, 1.8144rem);
+    --step-5: clamp(1.7107rem, 1.5484rem + 0.8114vw, 2.1773rem);
 }
 
 html{
@@ -22,11 +30,104 @@ html{
     font-family: Inter;
 }
 
-.attribution {
-    font-size: 11px;
+body{
+    height: 100svh;
+    background-color: var(--grey900);
+    color: var(--white);
+}
+
+.flex-box{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container::before{
+    content: "";
+}
+
+.container{
+    background-color: var(--grey800);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(270px, 259.5652px + 3.2609vw, 300px);
+    padding: clamp(21px, 18.5652px + 0.7609vw, 28px);
+    border-radius: 10px;
+}
+
+.profile > *{
+    margin-inline: auto;
     text-align: center;
+}
+
+.profile h1, .profile p{
+    margin-top: 1em;
+}
+
+img{
+    display: block;
+    width: 5em;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: var(--step-4);
+}
+
+h3{
+    color: var(--green);
+    font-size: var(--step-1);
+}
+
+p{
+    font-size: var(--step-0);
+}
+
+.link-box{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.link-box a{
+    font-size: inherit;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--grey700);
+    width: 100%;
+    text-align: center;
+    padding-block: 1em;
+    border-radius: 5px;
+    font-size: var(--step-1);
+}
+
+.link-box a:hover{
+    background-color: var(--green);
+    color: black;
+    font-weight: var(--bold);
+    transition: all .5s;
+}
+
+.attribution {
+    font-size: var(--step--2);
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.attribution p{
+    display: inline;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+    text-decoration: none;
 }
